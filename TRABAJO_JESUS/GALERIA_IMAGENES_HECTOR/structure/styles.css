@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #d8d8d8;
+}
+
+.images {
+    background: url("/Imagenes_HectorToledo/Ejercicio_010/Img/fondo_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1200px;
+    height: 800px;
+    border: 10px solid #020202 ;
+    border-radius: 30px;
+    position: relative;
+    margin: 6rem auto;
+    box-shadow: 0 0 10px #020202;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    border: 6px solid #020202;
+    border-radius: 20px;
+    background-color: #b2f593;
+    font-size: 40px;
+    padding: 10px;
+    color: #020202;
+    
+}
+
+.btn-izquierda {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-derecha {
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}

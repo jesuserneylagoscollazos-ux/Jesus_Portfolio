@@ -1,0 +1,2128 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Press+Start+2P&family=Russo+One&family=Unbounded:wght@200..900&display=swap');
+
+* {
+    font-family: 'JetBrains Mono'   ;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000000;
+}
+
+/* Informacion de Navegacion */
+.Contenedor_header {
+    background-color: #0e0d0d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: .5s;
+}
+
+.nav_ul_start .nav_ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 100vh;
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 0;
+    transform: translateX(-70px);
+    transition: .5s;
+}
+
+/* SE QUITO TEMPORALMENTE */
+/* .forma_base_responsive {
+    display: none;
+    transform: translateX(300px);
+    transition: .5s;
+} */
+
+.Contenedor_header_move {
+    background-color: rgba(10, 10, 10, 0.80);
+}
+
+.nav_ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    list-style: none;
+}
+
+.navli {
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #ffffff;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    position: relative;
+}
+
+.navli::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: #c7d400;
+    transition: .5s;
+}
+
+
+.navli:hover::after {
+    width: 100%;
+}
+
+.navli:hover {
+    transition: .5s;
+    color: #c7d400;
+    text-shadow: none;
+}
+
+.h1_header {
+    color: #c7d400;
+    font-size: 35px;    
+    font-weight: 700;
+    font-style: oblique;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.h1_header:hover {
+    transform: scale(1.05);
+    text-shadow: none;
+    text-shadow: 1px 1px 2px #312e2e,
+                1px 2px 3px #4e4b4b,
+                1px 1px 4px #afaeae;
+}
+
+.nav_responsive {
+    background-color: #c7d400;
+    padding: 5px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+/* Informacion del Inicio */
+
+.inicio {
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor de inicio --- SubContenedores */
+
+.contenedor_tarjeta {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 30px;
+}
+
+.imagen_contenedor_personal {
+    width: 450px;
+    height: 600px;
+    position: relative;
+}
+
+.inicioimg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.imagen_personal {
+    background-image: url("/img_portofolio/blanco_jesus.png");
+    opacity: 1;
+    transition: .5s ease-in;
+    transform: translateX(0) scale(1);
+}
+
+.inicio_cont_imagen {
+    width: 40%;
+    display: block;
+}
+
+.subcontenedor_inicio {
+    width: 100%;
+    height: 100%;
+}
+
+.inicio_cont_1 {
+    width: 40%;
+    opacity: 0.40;
+    transition: .5s ease-in;
+    z-index: 50;
+}
+
+.inicio_cont_1:hover {
+    opacity: 1;
+}
+
+.cont_inicio_img1 {
+    background-image: url("/img_portofolio/jesus_image_elegante.png");
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all .5s ease-in-out;
+    transform: translateX(-300px);
+}
+
+.contenedor_tarjeta:has(.inicio_cont_1:hover) .cont_inicio_img1{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contenedor_tarjeta:has(.inicio_cont_1:hover) .imagen_personal{
+    opacity: 0;
+    transform: translateX(-300px) scale(0.50);
+}
+
+.inicio_cont_2 {
+    width: 40%;
+    opacity: 0.40;
+    transition: .5s ease-in;
+    z-index: 50;
+}
+
+.inicio_cont_2:hover {
+    opacity: 1;
+}
+
+.cont_inicio_img2 {
+    background-image: url("/img_portofolio/jesus_img.png");
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all .5s ease-in-out;
+    transform: translateX(300px);
+}
+
+.contenedor_tarjeta:has(.inicio_cont_2:hover) .cont_inicio_img2{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contenedor_tarjeta:has(.inicio_cont_2:hover) .imagen_personal{
+    opacity: 0;
+    transform: translateX(300px) scale(0.50);
+}
+
+.imagen_responsive_final {
+    display: none;
+}
+
+.imagen_responsive_inicio {
+    display: none;
+    width: 600px;
+    max-width: 700px;
+    min-width: 300px;
+    height: 600px;
+}
+
+.cont_img_responsive_1 {
+    background-image: url("/img_portofolio/jesus_image_elegante.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cont_img_responsive_2 {
+    background-image: url("/img_portofolio/jesus_img.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.h1_inicio{ 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    margin-top: 10px;
+    pointer-events: none;
+    color: aliceblue;
+    padding: 25px 0;
+}
+
+.h2_inicio{ 
+    font-size: 25px;
+    font-family: 'Russo One';
+    font-weight: 100;
+    margin-top: 5px;
+    pointer-events: none;
+    color: #ffd000;
+    margin-top: 20px;
+}
+
+.h1_inicio_searching {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    pointer-events: none;
+    color: aliceblue;
+    margin: 80px 0px;
+}
+
+.ul_lista_search {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 25px;
+    list-style:square;
+}
+
+.descripcion_personal {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.Redfont {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    line-height: 47px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s;
+    margin: 25px 5px;
+}
+
+.Redfont:hover {
+    background-color: #000000;
+    border: 2px solid #7c7c83;
+    color:#7c7c83;
+}
+
+.button_dowload {
+    padding: 16px 30px;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .5s;
+    z-index: 10;
+}
+
+.button_dowload:hover {
+    box-shadow: 0 0 13px #7c7c83;
+    background-color: #7c7c83;
+    color: #000000;
+}
+.fa-download {
+    transition: .5s;
+}
+
+.button_dowload:hover .fa-download {
+    transform: translateY(3px);
+}
+
+/* Contenedor de informacion personal -- SOBRE MI */
+
+.sobremi {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background-color: #0B0F19    ;
+    color: white;
+    padding-top: 12rem;
+}
+
+.contenedor_sobremi_separar {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contenedor_sobremi {
+    flex: 1 1 45%;
+}   
+
+.contenedor_intereses {
+    flex: 1 1 49%;
+}  
+
+.h1_sobremi {
+    color: #c7d400;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Russo One';
+    font-weight: 200;
+}
+
+.parrafo_sobremi {
+    margin: 30px 0px;
+    font-size: 16px;
+}
+
+.span_sobremi {
+    color: #c7d400;
+}
+
+/* CONTENEDORES DE INFORMACION -- Sobre Mi */
+
+.contenedor_datos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    pointer-events: none;
+    width: 100%;
+}
+
+
+/* LISTA DE DATOS PERSONALES */
+
+.ul_datos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+}
+
+.datosli {
+    list-style: none;
+    font-size: 16px;
+}
+
+.li_Junior {
+    background-color: #ffffff;
+    padding: 3px 6px;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 700;
+}
+/* TITULOS DE CONTENEDORES SOBRE MI */
+
+.h1_cont {
+    font-size: 35px;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+/* SPAN Y DATOS SOBRE MI -- ESPACIADO Y COLOR CARACTERISTICO */
+
+.span_li {
+    color: #c7d400;
+    display: inline-block;
+    width: 200px;
+    font-weight: 700;
+}
+
+
+/* SUB CONTENEDOR DE INFORMACION DE GUSTOS */
+
+.subContenedor_intereses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
+.interes {
+    background-color: #03000f;
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 150px;
+    height: 100px;
+    min-width: 150px;
+    min-height: 150px;
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+.interes:hover {
+    background-color: #000000;
+    font-weight: 500;
+    color: #CCFF00;
+    box-shadow: 0 0 5px #ccff00d5, 0 0 10px #ccff0069, 0 0 13px #ccff0034;
+    transform: scale(1.10);
+    z-index: 10;
+}
+.interes:hover .sobremi_overlay_interes{
+    opacity: 1;
+}
+
+.sobremi_overlay_interes {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.foto1 {
+    background-image: url("/img_portofolio/juego_interes.jpg");
+}
+
+.foto2 {
+    background-image: url("/img_portofolio/pelicula_interes.jpg");
+}
+
+.foto3 {
+    background-image: url("/img_portofolio/cancion_interes.jpg");
+}
+
+.foto4 {
+    background-image: url("/img_portofolio/tecnologia_interes.webp");
+}
+
+.foto5 {
+    background-image: url("/img_portofolio/deporte_interes.jpg");
+}
+
+.foto6 {
+    background-image: url("/img_portofolio/viaje_interes.jpg");
+}
+
+.foto7 {
+    background-image: url("/img_portofolio/animales_interes.jpg");
+}
+
+.foto8 {
+    background-image: url("/img_portofolio/arte_interes.jpg");
+}
+
+
+.sblogo {
+    font-size: 40px;
+    padding-bottom: 5px;
+}
+
+/* .overlay {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    background-color: #007c92;
+} */
+
+
+/* CONTENEDOR DE INFORMACION --- SKILLS HABILIDADES */
+
+.skills {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background-color: #181c27 ;
+    color: white;
+}
+
+.h1_skills {
+    color: #c7d400;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Russo One';
+    font-weight: 200;
+    padding-top: 9rem;
+}
+
+.fila {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.contenedor_skills {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.cont_tecprof_skills{
+    width: 50%;
+    padding: 0px 30px;
+}
+
+.h1_title_skill {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.skill {
+    margin: 30px 0px;
+}
+
+.name_skill {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+
+/* BARRA DE PROGRESO  */
+
+/* BARRA LARGA */
+.barra_skill {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: #e7fbff;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.skill_logo {
+    font-size: 20px;
+    line-height: 45px;
+    color: #c7d400;
+}
+
+.skill_logo_dedicacion {
+    font-size: 20px;
+    line-height: 45px;
+    color: #000000;
+}
+
+.barra_skill:hover .count_progress {
+    box-shadow: 0 0 2px #CCFF00, 0 0 5px rgba(204, 255, 0, 0.548), 0 0 6px rgba(204, 255, 0, 0.233);
+    background-color: #ffffff;
+    transform: scale(1.10);
+}
+
+.barra_skill:hover .dedication_ball {
+    box-shadow: 0 0 2px #CCFF00, 0 0 5px rgba(204, 255, 0, 0.493), 0 0 6px rgba(204, 255, 0, 0.24);
+    border: 2px solid #CCFF00;
+    background-color: #000000;
+    transform: scale(1.10);
+}
+
+.barra_skill:hover .skill_logo_dedicacion {
+    color: #ffffff;
+}
+
+
+/* BARRA DE COLOR QUE AUMENTA CON PROGRESO */
+.progreso {
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #CCFF00, 0 0 5px rgba(204, 255, 0, 0.493), 0 0 6px rgba(204, 255, 0, 0.24);
+}
+
+.dedicacion {
+    background-color: #c7d400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #CCFF00, 0 0 5px rgba(204, 255, 0, 0.493), 0 0 6px rgba(204, 255, 0, 0.24);
+}
+
+.dedication_ball {
+    background-color: #c7d400;
+    font-weight: 700;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 55px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+        z-index: 10;
+    border: 2px solid #ffffff;
+    transition: .5s;
+}
+
+/* CIRCULO */
+.count_progress {
+    background-color: #000000;
+    font-weight: 700;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 55px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+        z-index: 10;
+    border: 2px solid #c7d400;
+    transition: .5s;
+}
+
+/* ANIMACION DE PROGRESO */
+
+.javascript {
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+
+.javascript::after {
+    content: "70%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+.htmlcss {
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+
+.htmlcss::after {
+    content: "60%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+.photoshop {
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+
+.photoshop::after {
+    content: "30%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    width: 10%;
+    padding-right: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+.react {
+    width: 0%;
+    animation: 2s react forwards;
+}
+
+.react::after {
+    content: "30%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+
+.wordpress {
+    width: 0%;
+    animation: 2s wordpress forwards;
+}
+
+.wordpress::after {
+    content: "30%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+
+.comunicacion {
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+
+.comunicacion::after {
+    content: "75%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+
+.trabajo_en_equipo {
+    width: 0%;
+    animation: 2s work_equip forwards;
+}
+
+.trabajo_en_equipo::after {
+    content: "90%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+.dedicacion {
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+
+.dedicacion::after {
+    content: "101%";
+    color: #000000;
+    font-weight: 700;
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+
+.creatividad {
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+
+.creatividad::after {
+    content: "90%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+.Resolución_de_problemas {
+    width: 0%;
+    animation: 2s Resolución_de_problemas forwards;
+}
+
+.Resolución_de_problemas::after {
+    content: "70%";
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+
+/* CONTENEDOR DE CURRICULUM -- APARTADO DE INFORMACION */
+
+
+.curriculum {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background: #E0E1DD ;
+    border-top: 3px solid #c7d400;
+    border-bottom: 3px solid #c7d400;
+    color: white;
+}
+
+.container_all_responsive {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding-top: 10rem;
+}
+
+.contenedor_flex_column {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 60%;
+}
+
+
+.nombre_titutlo_areaCurriculum {
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_curriculum {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont_curriculum {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 15px;
+    width: 100%;
+    padding: 0 1rem;
+}  
+
+
+.subcontenedor_curriculum {
+    background-color: #0B0F19;
+    border-radius: 10px;
+    padding: 28px;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+}
+
+.img_curriculum_yo {
+    background: url("/img_portofolio/personal_trajeGris.png");
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    background-size: cover;
+    border: 5px solid #c7d400;
+}
+
+/* TITULOS DE CURRICULUM -- CURRICULUM - Experiencia - Estudios */
+.h1_curriculum {
+    color: #c7d400;
+    font-size: 90px;
+    text-align: center;
+    font-family: 'Russo One';
+    font-weight: 200;
+}
+
+.h1_nombre_ambito {
+    font-size: 40px;
+    text-align: center;
+    margin: 30px 0px;
+    color: #000000;
+}
+
+/* CONTENEDOR TARJETAS DE INFORMACION */
+
+
+.subcontenedor_curriculum:hover {
+    background-color: #181c27;
+    transform: translateY(-5px);
+}
+
+.subcontenedor_curriculum:hover .h2_Nombre {
+    transform: scale(1.03);
+    color: #ffffff;
+    text-shadow: 0 0 2px #ffffff;
+}
+
+.Fecha_titulo_curriculum {
+    line-height: 23px;
+}
+
+/* NOMBRE PROYECTO -- NOMBRE GRADO -- EDUCACION */
+
+.h2_nombre_empresa {
+    font-size: 20px;
+    color: #e7fbff;
+}
+
+.h2_lapso_tiempo {
+    font-size: 15px;
+    color: #c7d400;
+    text-shadow: 0 0 2px #c7d400;
+    margin-bottom: 15px;
+}  
+
+/* TITULO TARJETA EDUCACION -- LUGAR */
+
+.h2_Nombre {
+    font-size: 25px;
+    font-weight: 500;
+    transition: .5s;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* DESCRIPCION CONTENEDOR */
+
+.descripcion_curriculum {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* LOGOS DE TARJETAS ESTUDIOS */
+
+.logoStudy {
+    color: #c7d400;
+    text-shadow: 0 0 2px #c7d400;
+}
+
+/* CONTENEDOR 2 EXPERIENCIA */
+
+.cont2_curriculum {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 0px 8rem;
+}
+
+.subcontenedor2_curriculum {
+    max-width: 500px;
+    max-height: 350px;
+    padding: 25px;
+    background-color: #0B0F19;
+    margin-top: 60px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.subcontenedor2_curriculum:hover {
+    background-color: #181c27;
+    transform: translateY(-10px);
+}
+
+
+.contenedor_area {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Navegar_Contenedor_stock {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    border: none;
+}
+
+.fa-arrow-right-long {
+    transform: rotate(-50deg);
+    transition: .5s;
+    font-size: 15px;
+    color: #c7d400;
+}
+
+.Navegar_Contenedor_stock:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.Navegar_Contenedor_stock:hover .fa-arrow-right-long {
+    transform: rotate(0deg);
+}
+
+
+.h1_nombre_ambito2 {
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+/* IMAGENES DE STOCK CONTROL  */
+
+
+.overlay_display_experiencia {
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.80);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition: .4s;
+    z-index: 110;
+}
+
+.overlay_activo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+ /* RELATIVE -- ABSOLUTE CONTENEDORES SEGUIDOS */
+
+
+
+.contenedor_botones_stockControl {
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    z-index: 30;
+}
+
+.Eliminar {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+.juntar_grid_stock_imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 20px;
+    height: 80%;
+    width: 80%;
+    gap: 10px;
+    transform: scale(0.8);
+    transition: .5s;
+}
+
+.transform_scale1{
+    transform: scale(1);
+    transition: .5s;
+}
+
+.imgStockEqual {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgStockEqual:hover {
+    transform: scale(1.01);
+}
+
+.imgStockEqual:hover .overlay_imagen_stock {
+    opacity: 1;
+}
+
+.overlay_imagen_stock {
+    background-color: rgba(72, 82, 26, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: .5s;
+    opacity: 0;
+}
+
+.name_overlay_stock {
+    color: #c7d400;
+}
+
+.imagen_1_stockControl {
+    background-image: url("/img_portofolio/fondo_stockcontrol1.png");
+}
+
+.imagen_2_stockControl {
+    background-image: url("/img_portofolio/fondo_stockcontrol2.png");
+}
+
+.imagen_3_stockControl {
+    background-image: url("/img_portofolio/fondo_stockcontrol3.png");
+}
+
+
+.text_develop_stockControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.cont_figma_text_stock {
+    background-color: #111a64;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.fa-user-clock {
+    color: #c7cdff;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+
+
+
+
+.portofolio {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background-color: #0B0F19;
+}
+
+/* SEPARACION DE CONTENEDORES EN PORTAFOLIO */
+
+.separar_contenedor_imagen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* TAMAÑO TARJETA PORTAFOLIO -- IMAGEN CON 100% tamaño de ContSimilarTamaño */
+
+.contSimilarTamaño {
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.contenedor_imagenes_portofolio {
+    overflow: hidden;
+}
+
+.imagen_portofolio_Experiencia {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 0.80;
+    transition: .8s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.subcontenedor2_portofolio {
+    padding-top: 100px;
+}
+
+.imagen_portofolio_Experiencia:hover {
+    transform: scale(1.10);
+    opacity: 1;
+}
+
+ /* INFORMACION APARTE DE PORTAFOLIO */
+
+/* SEPARACION DE PADDING TOP TITULO DE PORTAFOLIO */
+.paddTOP {
+    padding-top: 10rem;
+    letter-spacing: 2px;
+}
+/* TEXTO DE PORTAFOLIO INDIVIDUAL */
+
+.h1_nombre_portofolio {
+    color: #c7d400;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Russo One';
+    font-weight: 200;
+    margin: 50px 0px;
+}
+
+.single_Nombre {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.single_descripcion_portofolio {
+    font-size: 17px;
+    margin-top: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #dddddd;
+    line-height: 30px;
+}
+
+/* CONTENEDOR DE PORTAFOLIO APARTE -- JUNTAR  */
+.cont_single {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* CONTENEDOR FONT AWESOM DE LENGUAJES DE PROGRAMACION */
+
+.contenedor_font_lenguajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.lenguaje_programacion {
+    display: flex;
+    justify-content: space-around;
+    width: 130px;
+    background-color: #000000;
+    border: 2px solid #c7d400;
+    padding: 8px 8px;
+    border-radius: 15px;
+    margin-top: 20px;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.lenguaje_programacion:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 3px #CCFF00;
+    background-color: #ffffff;
+}
+
+.lenguaje_programacion:hover .js_text {
+    color: #000000;
+}
+
+.js_text {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+
+}
+
+.logo_lenguaje_programacion {
+    color: #c7d400;
+    font-size: 20px;
+}
+
+/* APARTADO DE DOOM */
+
+.contenedor_tarjetas_DOOM {
+    max-width: 3000px;
+    width: 100%;
+}
+
+.grid_tarjetas_doom {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta_doom {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tarjeta_doom:hover .overlay_doom {
+    opacity: 1;
+}
+
+.tarjeta_doom:hover .img_doom {
+    transform: scale(1.10);
+}
+
+.img_doom {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.overlay_doom {
+    background-color: rgba(218, 213, 213, 0.9);
+    color: #000000;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    transition: .6s all ease;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* SECTION CONTACTO -- CONTENEDORES -- h1 -- elementos */
+
+.contacto {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background: url("/img_portofolio/imagen_mapa_contacto.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contenedor_contacto_responsive {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contenedor_separar_contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.contenedor_contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    width: 35%;
+}
+
+.cont_contact {
+    position: relative;
+    width: 60%;
+    max-height: 600px;
+    min-height: 550px;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+}
+
+.contacto_map {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 300px;
+    min-height: 350px;
+    box-shadow: 0 0 8px #CCFF00, 0 0 10px #ccff0080;
+}
+
+.input_information {
+    padding: 5px 20px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.input_information_mensaje {
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    max-height: 20rem;
+}
+
+.button_contacto {
+    width: 40%;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 10px auto;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+    transition: .5s;
+}
+
+.button_contacto:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #c7d400;
+    box-shadow: 0 0 5px #CCFF00;
+}
+
+.button_contacto:hover .fa-paper-plane{
+    transform: translateY(-2px) translateX(2px);
+}
+
+.fa-paper-plane {
+    color: #c7d400;
+    transition: .5s;
+}
+
+.h1_contacto {
+    color: #c7d400;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Russo One';
+    font-weight: 200;
+    padding-top: 9rem;
+    padding-bottom: 1rem;
+}
+
+.contenedor_informacion_contacto {
+    padding: 35px 20px;
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.fa-color-pro {
+    color: #c7d400;
+    font-size: 18px;
+}
+
+
+
+
+.footer {
+    background-color: #000000;
+    padding: 50px 0 30px 0;
+    position: relative;
+    width: 100%;
+}
+
+.contenedor_responsive {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.arriba {
+    position: absolute;
+    top: -25px;
+    right: 50%;
+    padding: 15px;
+    width: 75px;
+    height: 70px;
+    text-align: center;
+    background-color: #000000;
+    color: #c7d400;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.nombre_personal {
+    color: #c7d400;
+}
+
+.arriba:hover .fa-angles-up{
+    transform: translateY(-5px)
+}
+
+.fa-angles-up {
+    transition: .5s;
+}
+
+.Footerfont {
+    background-color: transparent;
+    font-size: 30px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin: 40px 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.Footerfont:hover {
+    background-color: #000000;
+    color: #CCFF00;
+    border: 2px solid #CCFF00;
+}
+
+
+
+@media (max-width:1000px) {
+    
+    .navli{
+        font-size: 13px;
+        margin: 0 13px;
+    }
+}
+
+@media (max-width:760px) {
+    
+    .nav_ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 0;
+    transform: translateX(350px);
+    transition: .5s ease-in-out;
+    }
+}
+
+
+
+@media (max-width:1300px) {
+
+    .Contenedor_header {
+        width: 100%;
+    }
+
+    .inicio {
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+
+    .contenedor_tarjeta {
+        text-align: center;
+        gap: 40px;
+        padding-top: 8rem;
+        max-width: 1900px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inicio_cont_imagen {
+        display: none;
+    }
+
+    .subcontenedor_inicio {
+        width: 50%;
+    }
+
+    .imagen_responsive_inicio {
+        display: block;
+        width: 50%;
+        border-radius: 5px;
+    }
+
+    .equal_responsive_inicio {
+        width: 100%;
+        background-color: #0f0f0f;
+        padding: 0 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contenedor_tarjeta:has(.inicio_cont_1:hover) .cont_img_responsive_1{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .cont_img_responsive_1 {
+        transform: translateX(-450px);
+        opacity: 0;
+        transition: .5s ease-in-out;
+    }
+
+    .contenedor_tarjeta:has(.inicio_cont_2:hover) .cont_img_responsive_2{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .cont_img_responsive_2 {
+        transform: translateX(-450px);
+        opacity: 0;
+        transition: .5s ease-in-out;
+    }
+
+    .imagen_personal {
+        width: 350px;
+        height: 320px;
+        margin-top: 8rem;
+    }
+
+    .contenedor_inicio_equal {
+        width: 90%;
+    }
+}
+
+@media (max-width:900px) {
+    
+    .imagen_responsive_final {
+        display: block;
+    }
+
+    .contenedor_tarjeta {
+        text-align: center;
+        gap: 40px;
+        padding-top: 8rem;
+        max-width: 1800px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .equal_responsive_inicio {
+        width: 100%;
+        background-color: #0f0f0f;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .h1_inicio_searching {
+        font-size: 35px;
+    }
+
+    .h1_inicio {
+        font-size: 35px;
+    }
+
+    .subcontenedor_inicio {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .imagen_responsive_inicio {
+        height: 400px;
+        width: 100px;
+    }
+
+    .Redfont {
+        width: 44px;
+        height: 44px;
+        line-height: 42px;
+    }
+
+}
+
+/* SOBRE MI CELULAR Y INICIO */
+@media (max-width:760px){
+
+        .nav_responsive {
+        display: block;
+        z-index: 10;
+        transition: .2s;
+    }
+    
+    .nav_responsive:active {
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width:768px){
+
+    .separador_dos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedor_intereses {
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    .subContenedor_intereses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* SKILLS CELULAR */
+@media (max-width:1000px){
+
+    .fila {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .cont_tecprof_skills {
+        width: 100%;
+        margin-top: 80px;
+    }
+}
+
+/* CURRICULUM CELULAR */
+@media (max-width:768px){
+
+    .separar_curriculum {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nombre_titutlo_areaCurriculum {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .h1_curriculum {
+        font-size: 60px;
+    }
+
+    .img_curriculum_yo {
+        width: 340px;
+        height: 400px;
+    }
+
+    .contenedor_flex_column {
+        margin-top: 10rem;
+    }
+
+    .cont_curriculum {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont2_curriculum {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subcontenedor_curriculum {
+        width: 300px;
+        max-width: 320px;
+        height: fit-content;
+    }
+
+    .subcontenedor2_curriculum {
+        width: 300px;
+        max-width: 320px;
+        height: fit-content;
+    }
+
+    /* CONTENEDORES STOCK CONTROL LANDING */
+
+    .juntar_grid_stock_imagenes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgStockEqual {
+        width: 300px;
+        height: 180px;
+    }
+
+    .text_develop_stockControl {
+        font-size: 10px;
+    }
+
+    .Name_landing_page {
+        font-size: 20px;
+    }
+
+}
+
+/* PORTAFOLIO CELULAR */
+@media (max-width:1320px){
+
+    .separar_contenedor_imagen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 700px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .contSimilarTamaño {
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+            margin: 0;
+    }
+
+    .contenedor_imagenes_portofolio {
+        width: 100%;
+        height: 100%;
+    }
+
+    .single_descripcion_portofolio {
+        font-size: 18px;
+    }
+
+    .single_Nombre {
+        text-align: center;
+        font-size: 38px;
+        margin-top: 10rem;
+    }
+
+    .imagen_portofolio_Experiencia {
+        height: 400px;
+        width: 100%;
+    }
+
+    .flex_reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/* CONTACTO CELULAR */
+@media (max-width:870px){
+
+    .contacto {
+        height: fit-content;
+        padding-bottom: 15rem;
+    }
+
+    .contenedor_separar_contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+
+    .contenedor_contacto {
+        width: 85%;
+        margin-top: 50px;
+    }
+
+    .cont_contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contacto_map {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenedor_informacion_contacto {
+        width: 100%;
+    }
+
+    .h2_informacion_contacto {
+        font-size: 10px;
+    }
+}
+
+/* FOOTER CELULAR */
+
+@media (max-width:768px){
+
+    .contenedor_responsive {
+        flex-direction: column;
+    }
+
+    .Footerfont {
+        font-size: 28px;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .arriba {
+        right: 45%;
+    }
+}
+
+/* INTERSECTION OBSERVER MOD */
+ /* INTERSECTION NUMERO 1*/
+
+.oculto {
+    opacity: 0;
+    transition: all 1.20s ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
+
+
+.fade-left-delay1 {
+    transform: translateX(-20rem);
+    transition-delay:0.50s;
+}
+
+.fade-left-delay2 {
+    transform: translateX(-20rem);
+    transition-delay:1s;
+}
+
+
+
+.fade-right-delay1 {
+    transform: translateX(20rem);
+    transition-delay:0.50s;
+}
+
+.fade-right-delay2 {
+    transform: translateX(15rem);
+    transition-delay:1.20s;
+}
+
+.fade-right-delay3 {
+    transform: translateX(15rem);
+    transition-delay:1.50s;
+}
+
+
+.fade-bottom-delay1 {
+    transform: translateY(20rem);
+    transition-delay:0.20s;
+}
+
+.fade-bottom-delay2 {
+    transform: translateY(18rem);
+    transition-delay:0.40s;
+}
+
+.fade-bottom-delay3 {
+    transform: translateY(10rem);
+    transition-delay:0.60s;
+}
+
+.avanzar_skill_Intersection {
+    width: 0;
+}
+
+/* ENTRAR A PANTALLA */
+
+.fade-left-delay1.visible {
+    transform: translateX(0);
+}
+
+.fade-left-delay2.visible {
+    transform: translateX(0);
+}
+
+
+
+.fade-right-delay1.visible {
+    transform: translateX(0);
+}
+
+.fade-right-delay2.visible {
+    transform: translateX(0);
+}
+
+.fade-right-delay3.visible {
+    transform: translateX(0);
+}
+
+
+
+.fade-bottom-delay1.visible {
+    transform: translateY(0);
+}
+
+.fade-bottom-delay2.visible {
+    transform: translateY(0);
+}
+
+.fade-bottom-delay3.visible {
+    transform: translateY(0);
+}
+
+/* APARTE CONTACTO */
+
+.contactNo {
+    transition-delay: 0;
+    transform: translateX(-10rem);
+    transition: all .5s ease;
+}
+
+
+ /* INTERSECTION NUMERO 2 */
+
+.sinRelleno {
+    width: 0;
+    transition: all 1.80s ease;
+}

@@ -1,0 +1,43 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.Cronometro {
+    background-color: #ffffff;
+    max-width: 600px;
+    height: 300px;
+    padding: 40px;
+    margin: 200px auto 0;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.Cronometro h1 {
+    color: black;
+    letter-spacing: 6px;
+    font-size: 80px;
+    margin: 10px 0 60px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Cronometro img{
+    width: 60px;
+    cursor: pointer;
+}
+
+.Cronometro img:nth-child(2){
+    width: 90px;
+}
