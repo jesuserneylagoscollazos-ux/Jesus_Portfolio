@@ -159,7 +159,7 @@ body {
 }
 
 .imagen_personal {
-    background-image: url("/img_portofolio/blanco_jesus.png");
+    background-image: url("../../img_portofolio/blanco_jesus.png");
     opacity: 1;
     transition: .5s ease-in;
     transform: translateX(0) scale(1);
@@ -187,7 +187,7 @@ body {
 }
 
 .cont_inicio_img1 {
-    background-image: url("/img_portofolio/jesus_image_elegante.png");
+    background-image: url("../../img_portofolio/jesus_image_elegante.png");
     opacity: 0;
     transform: scale(1.05);
     transition: all .5s ease-in-out;
@@ -216,7 +216,7 @@ body {
 }
 
 .cont_inicio_img2 {
-    background-image: url("/img_portofolio/jesus_img.png");
+    background-image: url("../../img_portofolio/jesus_img.png");
     opacity: 0;
     transform: scale(1.05);
     transition: all .5s ease-in-out;
@@ -246,7 +246,7 @@ body {
 }
 
 .cont_img_responsive_1 {
-    background-image: url("/img_portofolio/jesus_image_elegante.png");
+    background-image: url("../../img_portofolio/jesus_image_elegante.png");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -255,7 +255,7 @@ body {
 }
 
 .cont_img_responsive_2 {
-    background-image: url("/img_portofolio/jesus_img.png");
+    background-image: url("../../img_portofolio/jesus_img.png");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -456,10 +456,10 @@ body {
     background-color: #03000f;
     color: rgb(255, 255, 255);
     border: none;
-    width: 150px;
-    height: 100px;
-    min-width: 150px;
-    min-height: 150px;
+    width: 180px;
+    height: 150px;
+    min-width: 130px;
+    min-height: 120px;
     max-height: 200px;
     max-width: 200px;
     border-radius: 5px;
@@ -497,35 +497,35 @@ body {
 }
 
 .foto1 {
-    background-image: url("/img_portofolio/juego_interes.jpg");
+    background-image: url("../../img_portofolio/juego_interes.jpg");
 }
 
 .foto2 {
-    background-image: url("/img_portofolio/pelicula_interes.jpg");
+    background-image: url("../../img_portofolio/pelicula_interes.jpg");
 }
 
 .foto3 {
-    background-image: url("/img_portofolio/cancion_interes.jpg");
+    background-image: url("../../img_portofolio/cancion_interes.jpg");
 }
 
 .foto4 {
-    background-image: url("/img_portofolio/tecnologia_interes.webp");
+    background-image: url("../../img_portofolio/tecnologia_interes.webp");
 }
 
 .foto5 {
-    background-image: url("/img_portofolio/deporte_interes.jpg");
+    background-image: url("../../img_portofolio/deporte_interes.jpg");
 }
 
 .foto6 {
-    background-image: url("/img_portofolio/viaje_interes.jpg");
+    background-image: url("../../img_portofolio/viaje_interes.jpg");
 }
 
 .foto7 {
-    background-image: url("/img_portofolio/animales_interes.jpg");
+    background-image: url("../../img_portofolio/animales_interes.jpg");
 }
 
 .foto8 {
-    background-image: url("/img_portofolio/arte_interes.jpg");
+    background-image: url("../../img_portofolio/arte_interes.jpg");
 }
 
 
@@ -936,7 +936,7 @@ body {
 }
 
 .img_curriculum_yo {
-    background: url("/img_portofolio/personal_trajeGris.png");
+    background: url("../../img_portofolio/personal_trajeGris.png");
     width: 400px;
     height: 500px;
     border-radius: 20px;
@@ -1182,15 +1182,15 @@ body {
 }
 
 .imagen_1_stockControl {
-    background-image: url("/img_portofolio/fondo_stockcontrol1.png");
+    background-image: url("../../img_portofolio/fondo_stockcontrol1.png");
 }
 
 .imagen_2_stockControl {
-    background-image: url("/img_portofolio/fondo_stockcontrol2.png");
+    background-image: url("../../img_portofolio/fondo_stockcontrol2.png");
 }
 
 .imagen_3_stockControl {
-    background-image: url("/img_portofolio/fondo_stockcontrol3.png");
+    background-image: url("../../img_portofolio/fondo_stockcontrol3.png");
 }
 
 
@@ -1419,7 +1419,7 @@ body {
 .contacto {
     min-height: 100vh;
     padding-bottom: 100px;
-    background: url("/img_portofolio/imagen_mapa_contacto.png");
+    background: url("../../img_portofolio/imagen_mapa_contacto.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1776,7 +1776,7 @@ body {
 }
 
 /* SOBRE MI CELULAR Y INICIO */
-@media (max-width:760px){
+@media (max-width:800px){
 
         .nav_responsive {
         display: block;
@@ -1786,6 +1786,19 @@ body {
     
     .nav_responsive:active {
         transform: scale(0.95);
+    }
+
+    .interes {
+        width: 140px;
+        height: 120px;
+    }
+}
+
+@media (max-width:400px){
+
+    .interes {
+        width: 130px;
+        height: 120px;
     }
 }
 
