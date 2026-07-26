@@ -9,7 +9,7 @@ body {
 }
 
 .images {
-    background: url("/Imagenes_HectorToledo/Ejercicio_010/Img/fondo_background.jpg");
+    background: url("../../../Imagenes_HectorToledo/Ejercicio_010/Img/fondo_background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

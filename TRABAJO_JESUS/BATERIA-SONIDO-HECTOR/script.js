@@ -7,9 +7,9 @@ kits.forEach((kit) => {
     btn.classList.add("btn");
     Container.appendChild(btn);
     btn.innerText = kit
-    btn.style.backgroundImage = `url(/imagenes_HectorToledo/Ejercicio_004/images/${kit}.png)`;
+    btn.style.backgroundImage = `url(../../imagenes_HectorToledo/Ejercicio_004/images/${kit}.png)`;
     const Audio = document.createElement("Audio");
-    Audio.src = `/imagenes_HectorToledo/Ejercicio_004/sounds/${kit}.mp3`;
+    Audio.src = `../../imagenes_HectorToledo/Ejercicio_004/sounds/${kit}.mp3`;
     Container.appendChild(Audio);
 
     btn.addEventListener("click", () => {

@@ -12,7 +12,7 @@ BtnRight.addEventListener("click", function(){
     if (contador > ImgMuestra.length-1){
         contador = 0;
     }
-    images.style.backgroundImage = `url("/Imagenes_HectorToledo/Ejercicio_010/Img/${ImgMuestra[contador]}.jpg")`
+    images.style.backgroundImage = `url("../../../Imagenes_HectorToledo/Ejercicio_010/Img/${ImgMuestra[contador]}.jpg")`
 })
 
 Btnleft.addEventListener("click", function(){
@@ -21,5 +21,5 @@ Btnleft.addEventListener("click", function(){
     if (contador < 0){
         contador = ImgMuestra.length-1;
     }
-    images.style.backgroundImage = `url("/Imagenes_HectorToledo/Ejercicio_010/Img/${ImgMuestra[contador]}.jpg")`
+    images.style.backgroundImage = `url("../../Imagenes_HectorToledo/Ejercicio_010/Img/${ImgMuestra[contador]}.jpg")`
 })

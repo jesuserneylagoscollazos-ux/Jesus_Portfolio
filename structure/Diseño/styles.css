@@ -1580,8 +1580,23 @@ body {
     transition: .5s;
 }
 
-.nombre_personal {
+.contenedor_footer_informacion {
     color: #c7d400;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer_log {
+    width: 100px;
+    cursor: pointer;
+    transition: .5s all ease;
+    border-radius: 50%;
+}
+
+.footer_log:hover {
+    transform: scale(1.15);
 }
 
 .arriba:hover .fa-angles-up{
